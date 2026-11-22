@@ -95,3 +95,15 @@ python server.py --check --check-renderer tunable --output tunable.jpg
 若使用 Git 克隆源码，请从 Lego 部署包取出 `lego.pt` 放到 `server.py` 同级，或用 `--checkpoint /path/to/model.pt` 指定自己的权重。Bicycle 包请保留 `compare/metrics.json` 和两组 `model.pt`，使用包内 `launch.sh`。预训练模型来源与数据说明见上文及部署包 README。
 
 前端依赖已经放在 `static/vendor`，Three.js 的 MIT 许可证见 `static/vendor/THREE-LICENSE.txt`。CANN、torch_npu 与 gauss-splat 需要按目标 NPU 的配套版本安装，不能用通用 requirements 自动选择。
+
+## 学习资料
+
+- [3DGS 入门指南](docs/3dgs_beginner_guide.md)
+- [3DGS 算法与算子测试指南](docs/3dgs_testing_guide.md)
+- [《3DGS 算法实现》PPTX · 22 页](docs/3DGS-algorithm-implementation.pptx)
+
+两份指南保留原有内容与验证边界；公开副本将原来的本机绝对路径链接替换为固定版本的上游链接。PPT 保留原稿内容，演示入口指向本机服务，使用前需部署查看器。
+
+## 开源许可
+
+原创代码与原创文档内容采用 [MIT](LICENSE)，可下载、使用、修改和分发。第三方依赖、图片和模型保留各自许可，详见 [资源来源与许可范围](THIRD_PARTY_NOTICES.md)。
