@@ -1,5 +1,9 @@
 # 3DGS 查看器部署说明
 
+[下载部署包（v0.1.0）](https://github.com/AlinaLuuu/ascend-3dgs-viewer/releases/tag/v0.1.0) · [项目看板](https://github.com/users/AlinaLuuu/projects/1)
+
+源码包含原生融合算子与可调 NPU 张量两种渲染路径。当前版本已完成 CPU 数学与浏览器验证，真实昇腾卡上的兼容性和性能仍需运行自检确认。
+
 在昇腾 Linux 主机上运行此目录的 Python 服务，再从本机浏览器查看。鼠标改变相机后，服务用原生 `gauss_splat.Rasterizer` 在 NPU 上渲染 RGB，并返回 JPEG。浏览器只计算相机、接收和显示图像。部署包随附的 `lego.pt` 是公开 Lego PLY 转换成的 checkpoint，含 42,401 个三阶球谐高斯。[源模型](https://huggingface.co/datasets/pablovela5620/nerf-synthetic-mirror/blob/main/trained/lego.ply)
 
 ## 昇腾主机
