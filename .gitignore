@@ -8,3 +8,5 @@ __pycache__/
 smoke*.jpg
 tunable.jpg
 native.jpg
+
+*.inspect.ndjson
